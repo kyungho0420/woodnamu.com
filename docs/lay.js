@@ -8,7 +8,7 @@ const siteConfig = {
         type: 'page',
         mode: 'demo',
         lang: 'ko',
-        theme: 'dark', // Forced Dark for Matte feel
+        theme: 'dark', // Matte 느낌을 위해 다크 테마 강제
         scroll_smooth: true
     },
     api: {
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.V4.init(siteConfig).then(async (app) => {
             app.registerEffect('waveEffect', window.waveEffect);
             
-            // ?덉젙?곸씤 ?띿뒪???뚮뜑留곸쓣 ?꾪빐 Data.load ?섎룞 ?뺤씤 諛??ъ쟻??(?듭뀡)
+            // 안정적인 텍스트 렌더링을 위해 Data.load 수동 확인 및 재적용 (옵션)
             const currentLang = document.documentElement.lang || 'ko';
             await app.Data.load(currentLang);
             
@@ -116,4 +116,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
