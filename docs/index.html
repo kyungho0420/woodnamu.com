@@ -28,8 +28,8 @@
     <script src="https://dev.dam.so/_inc/ex/v4/plug/canvas.js"></script>
 
     <!-- Project Specific -->
-    <link rel="stylesheet" href="./lay.css?v=2.2.0">
-    <script src="./lay.js?v=2.2.0" defer></script>
+    <link rel="stylesheet" href="./lay.css?v=3.0.1">
+    <script src="./lay.js?v=3.0.1" defer></script>
 
     <meta property="og:title" data-i18n="meta_title" content="Woodnamu">
     <meta property="og:description" data-i18n="meta_description" content="전문화된 한 페이지 웹사이트를 제공합니다.">
@@ -44,9 +44,9 @@
         <div class="damso-nav__container">
             <a href="#home" class="damso-nav__logo" data-i18n="home_title">WOODNAMU</a>
             <div class="damso-nav__buttons">
-                <nav id="lang-switcher" class="damso-lang-switcher">
-                    <a href="?lang=ko" class="damso-lang-btn active">KO</a>
-                    <a href="?lang=en" class="damso-lang-btn">EN</a>
+                <nav id="lang-switcher">
+                    <button class="active">KO</button>
+                    <button>EN</button>
                 </nav>
             </div>
         </div>
@@ -62,7 +62,7 @@
     <main>
         <section id="overview" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">info</span>
                     <span data-i18n="overview_title">Overview</span>
                 </h2>
@@ -80,28 +80,24 @@
 
         <section id="portfolio" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">folder_special</span>
                     <span data-i18n="portfolio_title">Portfolio</span>
                 </h2>
                 <p data-i18n="portfolio_desc" class="damso-section__description"></p>
                 <div class="damso-grid damso-grid--cols-2">
-                    <a href="https://www.andar.kr" target="_blank" rel="noopener noreferrer" class="damso-gallery-link">
-                        <div class="damso-card">
-                            <div class="damso-card__image-wrapper"><img src="./section/portfolio/01.jpg" alt="Portfolio 1" class="damso-card__image"></div>
-                            <div class="damso-card__content">
-                                <h4 class="damso-card__title" data-i18n="portfolio_01_title"></h4>
-                                <p class="damso-card__description" data-i18n="portfolio_01_desc"></p>
-                            </div>
+                    <a href="https://www.andar.kr" target="_blank" rel="noopener noreferrer" class="damso-card js-lightbox-trigger">
+                        <div class="damso-card__image-wrapper"><img src="./section/portfolio/01.jpg" alt="Portfolio 1" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h4 class="damso-card__title" data-i18n="portfolio_01_title"></h4>
+                            <p class="damso-card__description" data-i18n="portfolio_01_desc"></p>
                         </div>
                     </a>
-                    <a href="https://www.chuu.kr" target="_blank" rel="noopener noreferrer" class="damso-gallery-link">
-                        <div class="damso-card">
-                            <div class="damso-card__image-wrapper"><img src="./section/portfolio/02.jpg" alt="Portfolio 2" class="damso-card__image"></div>
-                            <div class="damso-card__content">
-                                <h4 class="damso-card__title" data-i18n="portfolio_02_title"></h4>
-                                <p class="damso-card__description" data-i18n="portfolio_02_desc"></p>
-                            </div>
+                    <a href="https://www.chuu.kr" target="_blank" rel="noopener noreferrer" class="damso-card js-lightbox-trigger">
+                        <div class="damso-card__image-wrapper"><img src="./section/portfolio/02.jpg" alt="Portfolio 2" class="damso-card__image"></div>
+                        <div class="damso-card__content">
+                            <h4 class="damso-card__title" data-i18n="portfolio_02_title"></h4>
+                            <p class="damso-card__description" data-i18n="portfolio_02_desc"></p>
                         </div>
                     </a>
                 </div>
@@ -110,7 +106,7 @@
 
         <section id="promotion" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">campaign</span>
                     <span data-i18n="promotion_title">Promotion</span>
                 </h2>
@@ -132,7 +128,7 @@
 
         <section id="product" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">shopping_bag</span>
                     <span data-i18n="product_title">Product</span>
                 </h2>
@@ -142,15 +138,14 @@
                     <!-- AI Plan Card -->
                     <div class="damso-card">
                         <div class="damso-card__content">
-                            <span class="damso-card__badge" data-i18n="plan_ai_badge"></span>
+                            <span class="damso-card__tag--overlay" data-i18n="plan_ai_badge"></span>
                             <h3 class="damso-card__title" data-i18n="plan_ai_title_main"></h3>
-                            <p class="damso-card__subtitle" data-i18n="plan_ai_title_sub"></p>
                             <p class="damso-card__description" data-i18n="plan_ai_desc"></p>
-                            <!-- Specs Table -->
-                            <div class="damso-specs-table">
-                                <div class="damso-specs-item"><span data-i18n="plan_specs_label_method"></span><span data-i18n="plan_ai_specs_value_method"></span></div>
-                                <div class="damso-specs-item"><span data-i18n="plan_specs_label_text"></span><span data-i18n="plan_ai_specs_value_text"></span></div>
-                                <div class="damso-specs-item"><span data-i18n="plan_specs_label_design"></span><span data-i18n="plan_ai_specs_value_design"></span></div>
+                            <!-- Specs List (Standard V4) -->
+                            <div class="damso-product-list">
+                                <div class="damso-product-list__item"><span class="damso-product-list__label" data-i18n="plan_specs_label_method"></span><span class="damso-product-list__value" data-i18n="plan_ai_specs_value_method"></span></div>
+                                <div class="damso-product-list__item"><span class="damso-product-list__label" data-i18n="plan_specs_label_text"></span><span class="damso-product-list__value" data-i18n="plan_ai_specs_value_text"></span></div>
+                                <div class="damso-product-list__item"><span class="damso-product-list__label" data-i18n="plan_specs_label_design"></span><span class="damso-product-list__value" data-i18n="plan_ai_specs_value_design"></span></div>
                             </div>
                         </div>
                         <div class="damso-price-info">
@@ -168,12 +163,11 @@
                     <div class="damso-card">
                         <div class="damso-card__content">
                             <h3 class="damso-card__title" data-i18n="plan_custom_title_main"></h3>
-                            <p class="damso-card__subtitle" data-i18n="plan_custom_title_sub"></p>
                             <p class="damso-card__description" data-i18n="plan_custom_desc"></p>
-                            <div class="damso-specs-table">
-                                <div class="damso-specs-item"><span data-i18n="plan_specs_label_method"></span><span data-i18n="plan_custom_specs_value_method"></span></div>
-                                <div class="damso-specs-item"><span data-i18n="plan_specs_label_text"></span><span data-i18n="plan_custom_specs_value_text"></span></div>
-                                <div class="damso-specs-item"><span data-i18n="plan_specs_label_design"></span><span data-i18n="plan_custom_specs_value_design"></span></div>
+                            <div class="damso-product-list">
+                                <div class="damso-product-list__item"><span class="damso-product-list__label" data-i18n="plan_specs_label_method"></span><span class="damso-product-list__value" data-i18n="plan_custom_specs_value_method"></span></div>
+                                <div class="damso-product-list__item"><span class="damso-product-list__label" data-i18n="plan_specs_label_text"></span><span class="damso-product-list__value" data-i18n="plan_custom_specs_value_text"></span></div>
+                                <div class="damso-product-list__item"><span class="damso-product-list__label" data-i18n="plan_specs_label_design"></span><span class="damso-product-list__value" data-i18n="plan_custom_specs_value_design"></span></div>
                             </div>
                         </div>
                         <div class="damso-price-info">
@@ -203,7 +197,7 @@
 
         <section id="contact" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">mail</span>
                     <span data-i18n="section_contact_title">Contact Us</span>
                 </h2>
@@ -217,7 +211,7 @@
                     </div>
                     <input type="hidden" name="form" value="woodnamu">
                     <button type="submit" class="damso-btn">
-                        <span class="damso-form__text" data-i18n="btn_submit">보내기</span>
+                        <span data-i18n="btn_submit">보내기</span>
                     </button>
                 </form>
             </div>
@@ -225,7 +219,7 @@
 
         <section id="search" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">search</span>
                     <span data-i18n="section_search_title">Search</span>
                 </h2>
@@ -235,7 +229,7 @@
                         data-i18n-placeholder="form_placeholder_search" placeholder="Search...">
                     <input type="hidden" name="form" value="woodnamu">
                     <button type="submit" class="damso-btn">
-                        <span class="damso-form__text" data-i18n="btn_search">검색</span>
+                        <span data-i18n="btn_search">검색</span>
                     </button>
                 </form>
             </div>
@@ -243,7 +237,7 @@
 
         <section id="request" class="damso-section">
             <div class="damso-container js-fade-in">
-                <h2 class="damso-section__title">
+                <h2>
                     <span translate="no" class="material-symbols-outlined notranslate">contact_support</span>
                     <span data-i18n="request_title">Request</span>
                 </h2>

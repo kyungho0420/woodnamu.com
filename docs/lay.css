@@ -1,331 +1,108 @@
 /**
- * Woodnamu - Standard V4 Refactored
- * Design Theme: Modern Minimal Matte (Deep Charcoal & Champagne Gold)
+ * Woodnamu - Minimalist Refactored
+ * Focusing on Brand Identity (Matte & Gold) with Core V4 Synergy
  */
 
 /* =================================================================
-   1. Core Variables (V4 Standard Mapping)
+   1. Brand Theme & Tokens (V4 Variable Override)
  ================================================================= */
 :root {
-    /* Brand Colors */
-    --damso-color-primary: hsl(35, 25%, 55%);   /* Champagne Gold */
-    --damso-color-secondary: hsl(35, 20%, 50%); 
-    --damso-color-accent: hsl(35, 15%, 45%);    /* Darker Gold */
+    /* Map Primary/Accent to Champagne Gold */
+    --brand-gold: hsl(35, 25%, 55%);
+    --brand-gold-dark: hsl(35, 20%, 45%);
     
-    /* Layout Tokens */
-    --damso-color-bg: hsl(220, 10%, 7%);        /* Deep Charcoal */
-    --damso-color-surface: hsl(220, 10%, 12%);   /* Card BG */
-    --damso-color-text: hsl(0, 0%, 90%);         /* Main Text */
-    --damso-color-text-weak: hsl(0, 0%, 60%);    /* Dim Text */
+    --damso-color-primary: var(--brand-gold);
+    --damso-color-accent: var(--brand-gold-dark);
+    
+    /* Matte Charcoal Base for Dark Mode */
+    --damso-color-bg: hsl(220, 10%, 7%);
+    --damso-color-surface: hsl(220, 10%, 12%);
     --damso-color-border: hsla(0, 0%, 100%, 0.1);
-
-    --damso-radius: 4px; /* Minimal Radius */
+    
+    --damso-card-bg: var(--damso-color-surface);
+    --damso-card-border: var(--damso-color-border);
+    
+    /* Typography Overrides */
+    --damso-radius: 4px;
 }
 
 /* =================================================================
-   2. Base & Typography
+   2. Base Polish (Matte Optimization)
  ================================================================= */
 body {
-    font-family: 'Noto Sans KR', 'Poppins', sans-serif;
-    background-color: var(--damso-color-bg);
-    color: var(--damso-color-text);
-    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
 }
 
-.damso-nav__logo,
-.damso-header__title,
-.damso-section__title,
+/* Ensure headings use Poppins for the premium feel */
+h1, h2, h3, h4, 
+.damso-nav__logo, 
 .damso-card__title {
-    font-family: 'Poppins', 'Noto Sans KR', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-family: 'Poppins', 'Noto Sans KR', sans-serif !important;
     text-transform: uppercase;
-}
-
-/* --- Section Title (V4 Standard Layout) --- */
-.damso-section__title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3.5rem;
-    color: var(--damso-color-primary);
-}
-
-.damso-section__title .material-symbols-outlined {
-    display: block;
-    font-size: 2.75rem;
-    margin-bottom: 0.75rem;
-    opacity: 0.8;
+    letter-spacing: 0.1em;
 }
 
 /* =================================================================
-   3. Components (BEM Strict)
+   3. Custom Feature Restoration (Borders & Specific UI)
  ================================================================= */
 
-/* --- Nav & Lang Switcher --- */
-.damso-nav {
-    backdrop-filter: blur(10px);
-    background: hsla(220, 10%, 7%, 0.8);
-    border-bottom: 1px solid var(--damso-color-border);
-}
-
-.damso-lang-switcher {
-    display: inline-flex;
-    padding: 3px;
-    background: hsla(0, 0%, 100%, 0.03);
-    border: 1px solid var(--damso-color-border);
-    border-radius: 50px;
-}
-
-.damso-lang-btn {
-    padding: 6px 18px;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--damso-color-text-weak);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.damso-lang-btn.active {
-    background-color: var(--damso-color-primary);
-    color: #000;
-}
-
-/* --- Header --- */
-.damso-header {
-    background-color: var(--damso-color-bg);
-    min-height: 90vh;
-}
-
-/* --- Cards (Flush Mode) --- */
-.damso-card {
-    position: relative;
-    background-color: var(--damso-color-surface);
-    border: 1px solid var(--damso-color-border);
-    border-radius: var(--damso-radius);
-    height: 100%;
-    overflow: hidden; /* Flush image clipping */
-    display: flex;
-    flex-direction: column;
-}
-
-.damso-card__image-wrapper {
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-}
-
-.damso-card__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.damso-card:hover .damso-card__image {
-    transform: scale(1.05);
-}
-
-.damso-card__content {
-    padding: 2.5rem; /* Text container protection */
-    flex: 1;
-}
-
-.damso-card__badge {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: var(--damso-color-primary);
-    color: #000;
-    padding: 0.3rem 0.8rem;
-    font-size: 0.7rem;
-    font-weight: 700;
-    border-radius: 2px;
-    z-index: 5;
+/* --- Custom Card Borders (Google, Cloudflare, Gemini) --- */
+.damso-card--google,
+.damso-card--gemini,
+.damso-card--cloudflare {
+    border: 1.5px solid transparent !important;
+    background-origin: border-box !important;
+    background-clip: padding-box, border-box !important;
 }
 
 .damso-card--google,
-.damso-card--gemini,
+.damso-card--gemini { 
+    background-image: linear-gradient(var(--damso-color-surface), var(--damso-color-surface)), 
+                      linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853) !important;
+}
+
 .damso-card--cloudflare { 
-    border-width: 1.5px;
+    background-image: linear-gradient(var(--damso-color-surface), var(--damso-color-surface)), 
+                      linear-gradient(to right, #F38020, #FAAD39) !important;
 }
 
-/* --- Specs Table (Premium UI) --- */
-.damso-specs-table {
-    margin-top: 2rem;
-    border-top: 1px solid var(--damso-color-border);
+/* --- Navigation Gloss & Matte Mix --- */
+.damso-nav {
+    backdrop-filter: blur(15px) !important;
+    background: hsla(220, 10%, 7%, 0.85) !important;
 }
 
-.damso-specs-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid var(--damso-color-border);
-    font-size: 0.85rem;
+#lang-switcher {
+    border: 1px solid var(--damso-color-border);
+    background: hsla(0, 0%, 100%, 0.05) !important;
 }
 
-.damso-specs-item span:first-child {
-    color: var(--damso-color-text-weak);
-    font-weight: 500;
-}
-
-.damso-specs-item span:last-child {
-    color: var(--damso-color-text);
-    font-weight: 600;
-}
-
-/* --- Price Info (Optimized for Flush Card) --- */
+/* --- Price Info Adjustment (For Matte consistency) --- */
 .damso-price-info {
-    background: hsla(0, 0%, 0%, 0.2);
-    border-top: 1px solid var(--damso-color-border);
-    display: flex;
-}
-
-.damso-price-info__item {
-    flex: 1;
-    padding: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-}
-
-.damso-price-info__item:first-child {
-    border-right: 1px solid var(--damso-color-border);
-}
-
-.damso-price-info__label {
-    font-size: 0.65rem;
-    color: var(--damso-color-text-weak);
-    text-transform: uppercase;
-}
-
-.damso-price-info__value {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--damso-color-text);
+    background: hsla(0, 0%, 100%, 0.03) !important;
 }
 
 .damso-price-info__value.setup {
-    color: var(--damso-color-primary);
+    color: var(--damso-color-primary) !important;
 }
 
-/* --- Forms (Contact / Search) --- */
-.damso-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.damso-form__input,
-.damso-form__textarea {
-    width: 100%;
-    background-color: hsla(0, 0%, 100%, 0.03);
-    border: 1px solid var(--damso-color-border);
-    border-radius: var(--damso-radius);
-    padding: 1rem;
-    color: var(--damso-color-text);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    transition: border-color 0.3s ease;
-}
-
-.damso-form__input:focus,
-.damso-form__textarea:focus {
-    outline: none;
-    border-color: var(--damso-color-primary);
-}
-
-.damso-contact-form .damso-btn,
-.damso-search-form .damso-btn {
-    width: 100%;
-}
-
-/* --- Buttons & Groups --- */
-.damso-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    background-color: var(--damso-color-primary);
-    color: #000;
-    border-radius: 2px;
-    padding: 1.15rem 2.75rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.damso-btn:hover {
-    background-color: #fff;
-    transform: translateY(-2px);
-}
-
-.damso-button-group {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-}
-
-/* --- Footer --- */
-.damso-footer {
-    padding: 4rem 0;
-    text-align: center;
-    background: var(--damso-color-bg);
-    border-top: 1px solid var(--damso-color-border);
-}
-
-.damso-footer p {
-    font-size: 0.8rem;
-    color: var(--damso-color-text-weak);
-    margin-bottom: 0.5rem;
-}
-
-.damso-footer a {
-    color: var(--damso-color-text-weak);
-    text-decoration: underline;
+/* --- FAQ & Profile Polish --- */
+.damso-faq-item__question::before {
+    color: var(--brand-gold) !important;
 }
 
 /* =================================================================
-   4. Action UI (Floating)
+   4. Minimum Overrides (Only if Core is lacking)
  ================================================================= */
-#damso-action-bar {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    z-index: 1000;
+
+/* Ensure the Promotion card image wrapper has proper ratio if core doesn't force it */
+.damso-card--horizontal .damso-card__image-wrapper {
+    min-height: 250px;
 }
 
-#to-top-btn {
-    position: fixed;
-    right: 32px;
-    bottom: 100px;
-    z-index: 999;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--damso-color-surface);
-    border: 1px solid var(--damso-color-border);
-    border-radius: 50%;
-    color: var(--damso-color-primary);
-    transition: all 0.3s ease;
-}
-
-#to-top-btn.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-}
-
-#to-top-btn:hover {
-    background: var(--damso-color-primary);
-    color: #000;
+/* Section Icons refinement */
+.damso-section h2 .material-symbols-outlined {
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
