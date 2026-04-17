@@ -106,16 +106,3 @@ h1, h2, h3, h4,
     opacity: 0.9;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
-
-/* --- Slim Card Tag Style --- */
-.damso-card__tag {
-    padding: 0.35rem 0.85rem !important;
-    font-size: 0.7rem !important;
-    border-radius: 2px !important;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 700 !important;
-    margin-bottom: 1.2rem !important;
-    background-color: var(--damso-color-primary) !important;
-    color: var(--damso-color-bg) !important;
-}
