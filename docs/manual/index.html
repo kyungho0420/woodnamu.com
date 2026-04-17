@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Page by Sigonggan - 사용자 가이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.maxim.pe.kr/_image/seo/maxim/favicon.ico"/>
+    <style>
+        :root {
+            --color-background: #F8FAFC;
+            --color-surface: #FFFFFF;
+            --color-border: #E2E8F0;
+            --color-primary: #2C5282;
+            --color-text-primary: #1A202C;
+            --color-text-secondary: #4A5568;
+            --font-family-base: 'Noto Sans KR', sans-serif;
+            --font-family-heading: 'Poppins', sans-serif;
+        }
+        body {
+            font-family: var(--font-family-base);
+            margin: 0;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .intro-container {
+            background-color: var(--color-surface);
+            padding: 3rem 4rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            border: 1px solid var(--color-border);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            font-family: var(--font-family-heading);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin: 0 0 1rem 0;
+        }
+        p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            margin: 0 0 2.5rem 0;
+        }
+        .lang-selector {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .lang-selector a {
+            display: block;
+            font-family: var(--font-family-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--color-text-primary);
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+        .lang-selector a:hover {
+            background-color: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <h1>Page by Sigonggan</h1>
+        <p>사용자 가이드를 확인할 언어를 선택하세요.</p>
+        <div class="lang-selector">
+            <a href="lang.ko.html">한국어</a>
+            <a href="lang.en.html">English</a>
+            <a href="lang.vi.html">Tiếng Việt</a>
+        </div>
+    </div>
+</body>
+</html>
+

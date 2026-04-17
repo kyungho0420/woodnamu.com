@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page by Sigonggan ?듯빀 ?쒖옉 媛?대뱶?쇱씤</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* gl.css - v1.9.0 base | Dark Theme Update */
+        :root {
+            --color-primary: #9F7AEA; /* Purple 400 */
+            --color-secondary: #A0AEC0; /* Gray 400 */
+            --color-accent: #63B3ED; /* Blue 400 */
+            --color-background: #1A202C; /* Gray 900 */
+            --color-surface: #2D3748; /* Gray 800 */
+            --color-border: #4A5568; /* Gray 600 */
+            --color-text-primary: #F7FAFC; /* Gray 50 */
+            --color-text-secondary: #E2E8F0; /* Gray 200 */
+            --color-text-soft: #A0AEC0; /* Gray 400 */
+            --font-family-base: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            --font-family-heading: 'Poppins', var(--font-family-base);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-family-base);
+            margin: 0;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .guide-container { display: flex; }
+        .guide-sidebar {
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: var(--color-surface);
+            border-right: 1px solid var(--color-border);
+            overflow-y: auto;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .sidebar-header h2 {
+            font-family: var(--font-family-heading);
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+            color: var(--color-primary);
+        }
+        .sidebar-header .version-info {
+            font-size: 0.85rem;
+            color: var(--color-text-soft);
+        }
+        .guide-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0 0 0;
+        }
+        .guide-nav > ul > li > a {
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 1rem;
+            margin-top: 1.2rem;
+        }
+        .guide-nav ul ul {
+            border-left: 1px solid var(--color-border);
+            margin: 0.5rem 0 0.5rem 0.5rem;
+            padding-left: 1rem;
+        }
+        .guide-nav a {
+            display: block;
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            padding: 0.3rem 0.5rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        .guide-nav a:hover, .guide-nav a.active {
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+        .guide-content {
+            margin-left: 300px;
+            padding: 3rem 4rem;
+            width: calc(100% - 300px);
+            box-sizing: border-box;
+        }
+        .content-header h1 {
+            font-family: var(--font-family-heading);
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+        .content-header p {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 2rem;
+        }
+        .content-section { margin-bottom: 4rem; }
+        .content-section h2 {
+            font-family: var(--font-family-heading);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.75rem;
+            margin: 3rem 0 2rem 0;
+        }
+        .content-section h3 {
+            font-family: var(--font-family-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid var(--color-accent);
+            padding-left: 1rem;
+        }
+        .content-section h4 {
+            font-family: var(--font-family-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        p, li { font-size: 1rem; color: var(--color-text-secondary); }
+        strong, b { color: var(--color-text-primary); font-weight: 600; }
+        code {
+            background-color: var(--color-surface);
+            color: #BEE3F8; /* Blue 200 */
+            padding: 0.2em 0.4em;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 0.9em;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #171923; /* Darker than body */
+            color: #F7FAFC;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        pre code { background-color: transparent; color: inherit; padding: 0; font-size: 0.9rem; }
+        blockquote, .rule-highlight, .error-analysis {
+            border-left: 4px solid;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        blockquote { border-color: var(--color-accent); background-color: rgba(99, 179, 237, 0.1); }
+        .rule-highlight { border-color: #FBBF24; background-color: rgba(251, 191, 36, 0.1); }
+        .error-analysis { border-color: #F87171; background-color: rgba(248, 113, 113, 0.1); }
+        .error-analysis h4 { color: #FCA5A5; margin-top: 0; }
+        table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+        th, td { border: 1px solid var(--color-border); padding: 0.8rem 1rem; text-align: left; }
+        th { background-color: var(--color-surface); font-weight: 600; }
+        @media (max-width: 1024px) {
+            .guide-container { flex-direction: column; }
+            .guide-sidebar { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--color-border); }
+            .guide-content { margin-left: 0; width: 100%; padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="guide-container">
+        <aside class="guide-sidebar">
+            <div class="sidebar-header">
+                <h2>Page by Sigonggan</h2>
+                <div class="version-info">
+                    <span>Version 1.24.0</span> | <span>2025-08-20</span>
+                </div>
+            </div>
+            <nav class="guide-nav">
+                <ul>
+                    <li><a href="#part1">Part 1: 媛쒖슂</a>
+                        <ul>
+                            <li><a href="#part1-1">1-1. ?쒖뒪??泥좏븰</a></li>
+                            <li><a href="#part1-2">1-2. ?묒뾽 洹쒖튃</a></li>
+                            <li><a href="#part1-3">1-3. ?묒뾽 ?먮쫫 ?뺤쓽</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part2">Part 2: 援ъ꽦</a>
+                        <ul>
+                            <li><a href="#part2-1">2-1. ?뚯씪 援ъ“? ?먮━</a></li>
+                            <li><a href="#part2-2">2-2. index.html</a></li>
+                            <li><a href="#part2-3">2-3. lay.css & lay.js</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part3">Part 3: 蹂??/a>
+                        <ul>
+                           <li><a href="#part3-1">3-1. 媛쒖슂 諛??먮━</a></li>
+                           <li><a href="#part3-2">3-2. ?ъ슜 媛?ν븳 蹂??/a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part4">Part 4: 而댄룷?뚰듃</a>
+                        <ul>
+                            <li><a href="#part4-1">4-1. ?덉씠?꾩썐</a></li>
+                            <li><a href="#part4-2">4-2. 移대뱶</a></li>
+                            <li><a href="#part4-3">4-3. ?곹샇?묒슜</a></li>
+                            <li><a href="#part4-4">4-4. ?뺣낫 ?쒓컖??/a></li>
+                            <li><a href="#part4-5">4-5. Z-Index ?뺤콉</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part5">Part 5: ?덉떆??/a>
+                        <ul>
+                            <li><a href="#part5-1">5-1. ?뺤쟻 肄섑뀗痢?/a></li>
+                            <li><a href="#part5-2">5-2. ?숈쟻 肄섑뀗痢?/a></li>
+                            <li><a href="#part5-3">5-3. ?ㅼ씠?섎? ?뱀뀡</a></li>
+                            <li><a href="#part5-4">5-4. ???뱀뀡 (?ㅻ뜑)</a></li>
+                            <li><a href="#part5-5">5-5. ?먮룞?ъ깮 ?щ씪?대뜑</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part6">Part 6: ?곕え</a>
+                         <ul>
+                            <li><a href="#part6-1">6-1. ?곕え 媛쒖슂</a></li>
+                            <li><a href="#part6-2">6-2. ?곕え ?뱀뀡 ?덉떆??/a></li>
+                            <li><a href="#part6-3">6-3. ?곕え 留곹겕 泥섎━</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part7">Part 7: SEO</a>
+                        <ul>
+                            <li><a href="#part7-1">7-1. ?듭떖 洹쒖튃</a></li>
+                            <li><a href="#part7-2">7-2. 怨좉툒 ?꾨왂: JSON-LD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part8">Part 8: 肄섑뀗痢??묒꽦</a>
+                        <ul>
+                            <li><a href="#part8-1">8-1. 湲????沅뚯옣</a></li>
+                            <li><a href="#part8-2">8-2. 臾몄껜 諛??쒗쁽</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#part9">Part 9: Version History</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="guide-content">
+            <header class="content-header">
+                <h1>Page by Sigonggan ?듯빀 ?쒖옉 媛?대뱶?쇱씤</h1>
+                <p>???꾨━?쒖꽌 留μ떖(Maxim)??媛쒕컻??Components 湲곕컲 Single Page Framework 'Page by Sigonggan'??湲곗닠 媛?대뱶 臾몄꽌?낅땲??</p>
+            </header>
+
+            <section id="part1" class="content-section">
+                <h2>Part 1: 媛쒖슂</h2>
+                <h3 id="part1-1">1-1. ?쒖뒪??泥좏븰</h3>
+                <p>Page by Sigonggan ?꾨젅?꾩썙?щ뒗 <strong>?앹궛?? ?좎?蹂댁닔?? ?뺤옣??/strong> 洹밸??붾? ?꾪빐 ?ㅺ퀎?섏뿀?듬땲??</p>
+                <ul>
+                    <li><strong>而댄룷?뚰듃 湲곕컲</strong>: ?ъ쟾 ?ㅺ퀎??UI 議곌컖??議곕┰?섏뿬 ?좎냽?섍쾶 ?섏씠吏瑜??꾩꽦?⑸땲??</li>
+                    <li><strong>?뚮쭏 ?쒖뒪??/strong>: <code>lay.css</code>??CSS 蹂???섏젙留뚯쑝濡??ъ씠???꾩껜 遺꾩쐞湲곕? 蹂寃쏀빀?덈떎.</li>
+                    <li><strong>?붿옄???먯튃</strong>: 媛?낆꽦怨??꾨Ц?깆쓣 ?꾪빐 ?μ떇???붿냼瑜?理쒖냼?뷀븯怨?肄섑뀗痢좎뿉 吏묒쨷?⑸땲??</li>
+                </ul>
+
+                <h3 id="part1-2">1-2. ?묒뾽 洹쒖튃</h3>
+                <p>蹂?臾몄꽌?먯꽌 <strong>?ъ슜??/strong>???묒뾽???붿껌?섎뒗 怨좉컼?? <strong>Gemini</strong>???묒뾽???섑뻾?섎뒗 AI瑜?吏移?븯硫? 紐⑤뱺 ?앹궛 ?묒뾽? '?붿껌 ??釉뚮━?????뱀씤'??3?④퀎 ?덉감瑜??꾧꺽??以?섑빀?덈떎.</p>
+
+                <div class="error-analysis">
+                    <h4>肄붾뱶 ?앹꽦 諛??뱀씤 洹쒖튃 (留ㅼ슦 以묒슂)</h4>
+                    <ol>
+                        <li><strong>?뱀씤 肄붾뱶 諛⑹떇:</strong> ?묒뾽 釉뚮━???? Gemini??諛섎뱶???꾩쓽??4?먮━ ?レ옄瑜?<code>0123</code>怨?媛숈? <code>&lt;code&gt;</code> ?쒓렇 ?뺤떇?쇰줈 ?쒖떆?댁빞 ?⑸땲??</li>
+                        <li><strong>諛섎났???뱀씤 ?덉감:</strong> 紐⑤뱺 肄붾뱶 ?앹꽦 ?묒뾽(?좉퇋 ?쒖옉, ?섏젙, 媛쒖꽑 ??? <strong>諛섎뱶??留ㅻ쾲 ?낅┰?곸씤 ?뱀씤 ?덉감</strong>瑜?嫄곗퀜???섎ŉ, 理쒖큹 ??踰덉쓽 ?뱀씤?쇰줈 ?щ윭 ?묒뾽???곗냽?댁꽌 吏꾪뻾?????놁뒿?덈떎.</li>
+                        <li><strong>?좎씪???뱀씤 諛⑹떇:</strong> Gemini媛 ?쒖떆??<strong>4?먮━ ?レ옄</strong>瑜??뺥솗?섍쾶 ?낅젰?섎뒗 寃껊쭔???좏슚???뱀씤?대ŉ, ?ъ슜?먭? '?뱀씤', '吏꾪뻾' ???ㅻⅨ ?⑥뼱??臾몄옣, ?뱀? ?由??レ옄瑜??낅젰?섎뒗 寃껋? 紐⑤몢 ?뱀씤?쇰줈 媛꾩＜?섏? ?딆뒿?덈떎.</li>
+                    </ol>
+                </div>
+                 <div class="rule-highlight">
+                    <h4>踰꾩쟾 愿由?諛??뚯씪 二쇱꽍 洹쒖튃</h4>
+                    <p>?쒖뒪?쒖쓽 紐⑤뱺 ?뚯씪(肄붿뼱, ?ъ슜??? ?곷떒 二쇱꽍??<strong>媛?대뱶?쇱씤 踰꾩쟾(Version)</strong>怨?<strong>理쒖쥌 ?섏젙??Last Modified)</strong>??紐낆떆?댁빞 ?⑸땲?? ?대뒗 ?뚯씪 媛꾩쓽 ?명솚?깆쓣 蹂댁옣?섍퀬 蹂寃??대젰??異붿쟻?섎뒗 ?듭떖 湲곗??낅땲??</p>
+                    <pre><code>/*
+    Version: 1.24.0
+    Last Modified: 2025-08-20
+    Author: Maxim
+    Contact: https://www.maxim.pe.kr
+    License: 짤 2025 Maxim. All Rights Reserved.
+*/</code></pre>
+                    <ul>
+                        <li><strong>Version</strong>: ?대떦 ?뚯씪???명솚?섎뒗 <strong>媛?대뱶?쇱씤??踰꾩쟾</strong>???섎??⑸땲?? 肄붿뼱 ?뚯씪怨??ъ슜???뚯씪 媛꾩쓽 ?곗씠??洹쒓꺽 諛?湲곕뒫 ?명솚?깆쓣 留욎텛??湲곗????⑸땲??</li>
+                        <li><strong>Last Modified</strong>: ?대떦 ?뚯씪??留덉?留됱쑝濡??섏젙???좎쭨瑜??섎??⑸땲??</li>
+                    </ul>
+                </div>
+                <div class="rule-highlight">
+                    <h4>媛?대뱶?쇱씤 臾몄꽌 愿由?洹쒖튃</h4>
+                    <ul>
+                        <li>?덉떆 肄붾뱶瑜?異⑸텇???묒꽦?섍퀬, 湲곗〈 ?덉떆 肄붾뱶???꾨씫?섏? ?딆뒿?덈떎.</li>
+                        <li>遺덊븘?뷀븳 ?꾩씠肄? ?됱긽 ???μ떇???④낵??媛먯젙???쒗쁽??吏?묓븯怨? 怨듭떇?곸씤 臾몄꽌??留욌뒗 紐낅즺?섍퀬 媛앷??곸씤 臾몄뼱泥대줈 以묒슂???댁슜留??붿빟?섏뿬 ?묒꽦?⑸땲??</li>
+                    </ul>
+                </div>
+
+                <h3 id="part1-3">1-3. ?묒뾽 ?먮쫫 ?뺤쓽</h3>
+                <p>?⑥쑉?곸씤 ?묒뾽???꾪빐 ?꾨옒???뺤쓽???쒖? ?묒뾽 ?먮쫫???곕쫭?덈떎.</p>
+                <h4>1. 理쒖큹 ?곹샇?묒슜</h4>
+                <p>?ъ슜?먭? 媛?대뱶?쇱씤 臾몄꽌, 肄붿뼱 ?뚯씪 諛??꾩슂 ???덊띁?곗뒪 ?ъ씠???ъ슜???뚯씪??泥섏쓬 ?낅줈?쒗븯硫? Gemini???꾨옒? 媛숈씠 ?묐떟?섎ŉ ?묒뾽???쒖옉?⑸땲??</p>
+                <blockquote>
+                    <p><b>Gemini??泥??묐떟:</b></p>
+                    <p>臾댁뾿???꾩??쒕┫源뚯슂?</p>
+                    <ol>
+                        <li>?좉퇋 ?ъ씠???쒖옉</li>
+                        <li>湲곗〈 ?ъ씠???섏젙</li>
+                        <li>肄붿뼱 ?쒖뒪??媛쒖꽑 寃??/li>
+                    </ol>
+                </blockquote>
+
+                <h4>2. ?좉퇋 ?ъ씠???쒖옉 ?먮쫫</h4>
+                <ol>
+                    <li>?ъ슜?먭? '?좉퇋 ?ъ씠???쒖옉'???좏깮?섎㈃, Gemini???꾨옒 ?뺣낫瑜??쒖꽌?濡??섏쭛?⑸땲??
+                        <ul>
+                            <li><b>?ъ씠???좏삎:</b> ?쇰컲 / ?곕え</li>
+                            <li><b>?ъ슜??URL 二쇱냼:</b> ?? `chuu.kr`</li>
+                            <li><b>?ъ씠???듭떖 ?뺣낫:</b> ?ъ씠???대쫫, 二쇱젣, 二쇱슂 ?쒕퉬????媛꾨왂???ㅻ챸</li>
+                        </ul>
+                    </li>
+                    <li>紐⑤뱺 ?뺣낫媛 ?섏쭛?섎㈃, Gemini???대? 諛뷀깢?쇰줈 珥덇린 `index.html`, `lay.css`瑜??앹꽦?섍퀬, 以묒븰 ?곗씠????μ냼??`lang.json` ?뚯씪???앹꽦??以鍮꾨? 留덉묩?덈떎.</li>
+                    <li><strong>湲곕낯 ?④낵 ?곸슜:</strong> 蹂꾨룄 ?붿껌???녿뒗 ?? ?좉퇋 ?ъ씠?몄쓽 ?ㅻ뜑?먮뒗 '蹂??④낵 罹붾쾭??<code>.canvas-stars</code>)'? '肄섑뀗痢??⑤윺?숈뒪 ?④낵(<code>.js-parallax-content</code>)'媛 湲곕낯?쇰줈 ?곸슜?⑸땲??</li>
+                </ol>
+
+                <h4>3. 湲곗〈 ?ъ씠???섏젙 ?먮쫫</h4>
+                <ol>
+                    <li>?ъ슜?먭? ?덊띁?곗뒪 ?ъ씠?멸? ?꾨땶 ?ㅻⅨ ?ъ씠???ъ슜???뚯씪(`index.html` ?????낅줈?쒗븯硫?'湲곗〈 ?ъ씠???섏젙' 紐⑤뱶媛 ?먮룞?쇰줈 ?쒖옉?⑸땲??</li>
+                    <li>Gemini???낅줈?쒕맂 ?뚯씪?ㅼ쓣 媛?대뱶?쇱씤??留욎떠 寃?좏븯怨? 以???꾪솴怨?媛쒖꽑?먯쓣 ?붿빟?섏뿬 蹂닿퀬?⑸땲??</li>
+                    <li>蹂닿퀬 ?? "?대뼡 遺遺꾩쓣 ?섏젙?섍굅??異붽??섏떆寃좎뒿?덇퉴?"?쇨퀬 吏덈Ц?섎ŉ 援ъ껜?곸씤 ?섏젙 ?붿껌???湲고빀?덈떎.</li>
+                </ol>
+
+                <h4>4. ?묒뾽 ?꾨즺 蹂닿퀬</h4>
+                <p>紐⑤뱺 肄붾뱶 ?앹꽦 ?묒뾽???꾨즺???? Gemini???꾨옒 ?뺤떇??留욎떠 ?묒뾽 寃곌낵瑜?釉뚮━?묓빐???⑸땲??</p>
+                 <blockquote>
+                    <p><b>Gemini???묒뾽 ?꾨즺 蹂닿퀬 ?덉떆:</b></p>
+                    <p>?붿껌?섏떊 ?묒뾽???꾨즺?섏뿀?듬땲??</p>
+                    <ul>
+                        <li><strong>?섏젙 ?뚯씪:</strong> `v1.js`, `v1_setup.html` ??/li>
+                        <li><strong>媛?대뱶?쇱씤 踰꾩쟾:</strong> 1.24.0</li>
+                        <li><strong>理쒖쥌 ?섏젙??</strong> 2025-08-20</li>
+                        <li><strong>?묒뾽 ?댁슜:</strong>
+                            <ul>
+                                <li>'?쒓났媛? 由щ툕?쒕뵫 ?묒뾽</li>
+                                <li>'chuu.kr' ?ъ씠??媛쒖꽑 ?ы빆 諛섏쁺</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </blockquote>
+            </section>
+
+            <section id="part2" class="content-section">
+                <h2>Part 2: 援ъ꽦</h2>
+                <p>Page by Sigonggan ?꾨젅?꾩썙?щ? 援ъ꽦?섎뒗 ?뚯씪?ㅼ쓽 ??븷怨?援ъ“, ?묐룞 ?먮━瑜??ㅻ챸?⑸땲??</p>
+                <h3 id="part2-1">2-1. ?뚯씪 援ъ“? ?먮━</h3>
+                <p>?뚯씪? **肄붿뼱(Core) ?뚯씪**怨?**?ъ슜??User) ?뚯씪**濡??섎돥?덈떎.</p>
+
+                <h4>肄붿뼱 ?뚯씪</h4>
+                <p>?꾨젅?꾩썙?ъ쓽 ?붿쭊怨?媛숈쑝硫? 湲곕뒫 媛쒖꽑, 踰꾧렇 ?섏젙 ??遺덇??쇳븳 寃쎌슦?먮쭔 <strong>?ъ슜?먯? Gemini???곹샇 ?숈쓽 ?섏뿉 ?섏젙</strong>?????덉뒿?덈떎.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>?뚯씪紐?/th>
+                            <th>??븷</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>v1.css</code></td>
+                            <td>紐⑤뱺 而댄룷?뚰듃(移대뱶, 踰꾪듉 ????湲곕낯 援ъ“? 諛섏쓳???ㅽ??쇱쓣 ?뺤쓽?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td><code>v1.js</code></td>
+                            <td>**以묒븰 ?곗씠??濡쒕뵫**, ?숈쟻 肄섑뀗痢??앹꽦, ?쇱씠?몃컯?????듭떖 ?곹샇?묒슜??泥섎━?⑸땲??</td>
+                        </tr>
+                         <tr>
+                            <td><code>v1.json</code></td>
+                            <td>?명꽣 ?щ젅?? ?곕え ?ъ씠???덈궡 臾멸뎄 ??紐⑤뱺 ?ъ씠?몄뿉 怨듯넻?쇰줈 ?꾩슂??湲곕낯 ?띿뒪???곗씠?곕? ?닿퀬 ?덉뒿?덈떎.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <blockquote>
+                    <p><b>肄붿뼱 ?뚯씪 寃쎈줈:</b> 肄붿뼱 ?뚯씪? <code>https://www.sigonggan.com/@/page/core/</code> URL 寃쎈줈瑜??ъ슜?⑸땲??</p>
+                </blockquote>
+
+                <h4>?ъ슜???뚯씪</h4>
+                <p>?ъ슜?먭? ?ъ씠?몄쓽 ?뺤껜?깆뿉 留욊쾶 ?먯쑀濡?쾶 ?섏젙?섎뒗 ?뚯씪?낅땲??</p>
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>?뚯씪紐?/th>
+                            <th>??븷</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>index.html</code></td>
+                            <td>?ъ씠?몄쓽 ?꾩껜 援ъ“瑜??ㅺ퀎?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td><code>lay.css</code></td>
+                            <td>?ъ씠??怨좎쑀???됱긽, ?고듃 ???붿옄???뚮쭏瑜??뺤쓽?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td><code>lang.json</code></td>
+                            <td>?ъ씠??怨좎쑀???띿뒪??諛?紐⑤뱺 JSON ?곗씠?곕? ?뺤쓽?⑸땲??</td>
+                        </tr>
+                         <tr>
+                            <td><code>lay.js</code></td>
+                            <td>(?좏깮 ?ы빆) ?뱀젙 ?ъ씠?몄뿉留??꾩슂???ㅽ겕由쏀듃 ?④낵(?? ?밸퀎???좊땲硫붿씠??瑜?異붽??????ъ슜?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td><code>sitemap.xml</code></td>
+                            <td>寃???붿쭊 理쒖쟻?붾? ?꾪븳 ?ъ씠?몃㏊ ?뺣낫瑜??댁뒿?덈떎.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <blockquote>
+                    <p><b>?ъ슜???뚯씪 寃쎈줈:</b> ?ъ슜???뚯씪? <code>./</code> ?곷? 寃쎈줈瑜??ъ슜?⑸땲??</p>
+                </blockquote>
+
+                <h3 id="part2-2">2-3. index.html</h3>
+                <p>?ъ씠?몄쓽 ?꾩껜 援ъ“瑜??뺤쓽?섎뒗 堉덈? ?뚯씪?낅땲??</p>
+
+                <h4>Head ?묒꽦 ?덉떆</h4>
+                <p><code>&lt;title&gt;</code>???쒖쇅??紐⑤뱺 硫뷀? ?뺣낫??<code>data-lang</code> ?띿꽦 ?놁씠 肄섑뀗痢좊? 吏곸젒 ?묒꽦?섏뿬 寃?됱뿏吏꾩씠 ?ъ씠???뺣낫瑜?鍮좊Ⅴ寃??섏쭛?????덈룄濡??⑸땲??</p>
+                <pre><code>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;!-- SEO Meta Tags (肄섑뀗痢?吏곸젒 ?묒꽦) --&gt;
+    &lt;meta name="description" content="This is Cinderella Makeup Studio, where you discover your most authentic beauty."&gt;
+    &lt;meta name="keywords" content="makeup, personal color, wedding makeup, cinderella"&gt;
+    &lt;link rel="canonical" href="https://www.example.com/" /&gt;
+
+    &lt;!-- Open Graph Tags for Social Media (肄섑뀗痢?吏곸젒 ?묒꽦) --&gt;
+    &lt;meta property="og:title" content="Cinderella | Makeup Studio"&gt;
+    &lt;meta property="og:description" content="This is Cinderella Makeup Studio, where you discover your most authentic beauty."&gt;
+    &lt;meta property="og:image" content="https://www.example.com/section/home/01.jpg"&gt;
+    &lt;meta property="og:url" content="https://www.example.com"&gt;
+    &lt;meta property="og:site_name" content="Cinderella"&gt;
+
+    &lt;!-- Title (珥덇린 ?띿뒪?몄? data-lang ?띿꽦 ?숈떆 ?묒꽦) --&gt;
+    &lt;title data-lang="site_title"&gt;Cinderella - Makeup Studio&lt;/title&gt;
+
+    &lt;!-- CSS & JS Files (update 荑쇰━ 異붽?) --&gt;
+    &lt;link rel="stylesheet" href="https://www.sigonggan.com/@/page/core/v1.css?update=20250820"&gt;
+    &lt;link rel="stylesheet" href="./lay.css?update=20250820"&gt;
+    &lt;script src="https://www.sigonggan.com/@/page/core/v1.js?update=20250820" defer&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+
+                <h4>Body 援ъ“ ?덉떆</h4>
+                <p><code>&lt;body&gt;</code>???뺥빐吏??쒖꽌???곕씪 **怨좎젙 ?뱀뀡**怨?**?쇰컲 ?뱀뀡**??諛곗튂?섍퀬, 紐⑤뱺 ?뱀뀡???쒕ぉ(h2)怨??ㅻ챸(p.section-description) ?띿뒪?몃뒗 <code>data-lang</code> ?띿꽦怨??④퍡 湲곕낯 ?몄뼱 肄섑뀗痢좊? HTML??吏곸젒 ?묒꽦?댁빞 ?⑸땲??</p>
+                <pre><code>&lt;body&gt;
+    &lt;!-- 怨좎젙 ?뱀뀡: ?대퉬寃뚯씠??(濡쒓퀬???곷Ц?쇰줈 怨좎젙) --&gt;
+    &lt;nav id="navbar"&gt;
+        &lt;a href="#home" class="logo"&gt;Page by Sigonggan&lt;/a&gt;
+        ...
+    &lt;/nav&gt;
+
+    &lt;!-- 怨좎젙 ?뱀뀡: ?ㅻ뜑 (??댄?? ?곷Ц?쇰줈 怨좎젙) --&gt;
+    &lt;header id="home" class="fullscreen"&gt;
+        &lt;div class="content js-parallax-content"&gt;
+            &lt;h1&gt;?귞㈉??lt;/h1&gt;
+            &lt;p class="subtitle" data-lang="home_subtitle"&gt;?쒓났媛?lt;/p&gt;
+        &lt;/div&gt;
+        ...
+    &lt;/header&gt;
+
+    &lt;!-- 硫붿씤 肄섑뀗痢??곸뿭 --&gt;
+    &lt;main&gt;
+        &lt;section id="overview"&gt;
+            &lt;div class="container"&gt;
+                &lt;h2 data-lang="overview_title"&gt;Overview&lt;/h2&gt;
+                &lt;p class="section-description" data-lang="overview_desc"&gt;A brief introduction to our services.&lt;/p&gt;
+                ...
+            &lt;/div&gt;
+        &lt;/section&gt;
+        ...
+    &lt;/main&gt;
+
+    &lt;!-- 怨좎젙 ?뱀뀡: ?명꽣 --&gt;
+    &lt;footer&gt;...&lt;/footer&gt;
+
+    &lt;!-- 怨좎젙 UI: 留??꾨줈 媛湲?踰꾪듉 --&gt;
+    &lt;div id="to-top-btn"&gt;...&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+
+                <h3 id="part2-3">2-3. lay.css & lay.js</h3>
+                <p><code>lay.css</code>???ъ씠?몄쓽 怨좎쑀???붿옄???됱긽, ?고듃 ???? <code>lay.js</code>???ъ씠??怨좎쑀???ㅽ겕由쏀듃 ?④낵瑜??뺤쓽?섎뒗 ?ъ슜???뚯씪?낅땲?? <code>lay.js</code>???꾩슂 ?쒖뿉留??좏깮?곸쑝濡?異붽??⑸땲??</p>
+            </section>
+
+            <section id="part3" class="content-section">
+                <h2>Part 3: 蹂??/h2>
+                <h3 id="part3-1">3-1. 媛쒖슂 諛??먮━</h3>
+                <p>Page by Sigonggan ?꾨젅?꾩썙?щ뒗 ?띿뒪?몃굹 URL??蹂대떎 ?좎뿰?섍퀬 ?ъ궗??媛?ν븯寃?留뚮뱾湲??꾪빐 ?ㅼ뼇??蹂?섎? ?쒓났?⑸땲?? `v1.js`???섏씠吏媛 濡쒕뱶?????뱀젙 議곌굔(?? ?꾩옱 ?꾨찓?? ?꾩옱 ?곕룄)??媛먯??섏뿬 ?대??곸쑝濡?蹂?섎? ?앹꽦?⑸땲??</p>
+                <p>??蹂?섎뱾? `v1.json` ?먮뒗 以묒븰 ?쒕쾭??`lang.json` ?뚯씪 ?댁뿉??<code>${蹂?섎챸}</code> ?뺥깭???뚮젅?댁뒪??붾줈 ?ъ슜?????덉뒿?덈떎. `v1.js`媛 ?몄뼱 ?곗씠?곕? 遺덈윭? ?섏씠吏瑜??뚮뜑留곹븷 ?????뚮젅?댁뒪??붾뱾???ㅼ젣 媛믪쑝濡??먮룞 移섑솚?⑸땲??</p>
+
+                <h3 id="part3-2">3-2. ?ъ슜 媛?ν븳 蹂??/h3>
+                <p>?꾩옱 ?쒖뒪?쒖뿉???쒓났?섎뒗 ?숈쟻 蹂?섎뒗 ?ㅼ쓬怨?媛숈뒿?덈떎.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>?뚮젅?댁뒪???/th>
+                            <th>?ㅻ챸</th>
+                            <th>?덉떆 (<code>www.chuu.kr</code> ?묒냽 ??</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>${domain}</code></td>
+                            <td>?쒕툕?꾨찓?몄쓣 ?ы븿???꾩껜 ?꾨찓??二쇱냼?낅땲??</td>
+                            <td><code>www.chuu.kr</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>${domain_apex}</code></td>
+                            <td>?쒕툕?꾨찓?몄쓣 ?쒖쇅???듭떖 ?꾨찓?몄엯?덈떎. (洹쒖튃??`chuu.kr`?쇰줈 ?몄떇)</td>
+                            <td><code>chuu.kr</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>${domain_sub}</code></td>
+                            <td>?꾨찓?몄쓽 泥?踰덉㎏ 遺遺??쒕툕?꾨찓???낅땲??</td>
+                            <td><code>www</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>${domain_brand}</code></td>
+                            <td>?꾨찓?몄쓽 ??踰덉㎏ 遺遺?釉뚮옖???낅땲??</td>
+                            <td><code>chuu</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>${domain_tld}</code></td>
+                            <td>?꾨찓?몄쓽 留덉?留?遺遺?理쒖긽???꾨찓???낅땲??</td>
+                            <td><code>kr</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>${year}</code></td>
+                            <td>?ㅽ겕由쏀듃媛 ?ㅽ뻾?섎뒗 ?쒖젏???꾩옱 ?곕룄(4?먮━)?낅땲??</td>
+                            <td><code>2025</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>?ъ슜 ?덉떆: ?숈쟻 ?명꽣 ?뺣낫 ?앹꽦</h4>
+                <p><code>v1.json</code>???꾨옒? 媛숈씠 ?뚮젅?댁뒪??붾? ?ъ슜?섎㈃, ?대뼡 ?ъ씠?몄뿉?쒕뱺 蹂꾨룄 ?섏젙 ?놁씠 ?먮룞?쇰줈 ?꾩옱 ?곕룄? 釉뚮옖???대쫫???ы븿??Copyright 臾멸뎄? ?щ젅??留곹겕媛 ?앹꽦?⑸땲??</p>
+                <pre><code>// v1.json
+{
+    "_default": {
+        "footer_credit_url": "https://www.sigonggan.com/@/page?url=${domain_apex}",
+        "copyright_text": "&copy; ${year} ${domain_brand}. All Rights Reserved."
+    }
+    // ...
+}</code></pre>
+                <blockquote>
+                    <b>寃곌낵:</b> 留뚯빟 2025?꾩뿉 <code>www.chuu.kr</code>?먯꽌 ?ъ씠?멸? ?ㅽ뻾?쒕떎硫? Copyright ?띿뒪?몃뒗 `&copy; 2025 chuu. All Rights Reserved.`濡? ?щ젅??留곹겕??`https://www.sigonggan.com/@/page?url=chuu.kr`濡??먮룞 ?꾩꽦?⑸땲??
+                </blockquote>
+            </section>
+
+            <section id="part4" class="content-section">
+                <h2>Part 4: 而댄룷?뚰듃</h2>
+                <p>Page by Sigonggan ?꾨젅?꾩썙?ъ쓽 ?듭떖 UI 而댄룷?뚰듃 紐⑸줉. <code>v1.css</code>???뺤쓽?섏뼱 ?덉쑝誘濡??쎌냽??HTML 援ъ“留??묒꽦?섎㈃ ?⑸땲??</p>
+                 <h3 id="part4-1">4-1. ?덉씠?꾩썐</h3>
+                <h4>.card-grid</h4>
+                <p>移대뱶?ㅼ쓣 ?대뒗 洹몃━??而⑦뀒?대꼫. <code>.grid-1</code>, <code>.grid-2</code>, <code>.grid-3</code> ?대옒?ㅻ? 異붽??섏뿬 諛섏쓳????媛쒖닔瑜?議곗젅?????덉뒿?덈떎.</p>
+
+                <h3 id="part4-2">4-2. 移대뱶</h3>
+                <h4>湲곕낯 移대뱶</h4>
+                <p>?뺣낫瑜??대뒗 媛??湲곕낯?곸씤 UI ?⑥쐞?낅땲??</p>
+                <pre><code>&lt;div class="ui-card"&gt;
+    &lt;img src="..." alt="..." class="ui-card-image"&gt;
+    &lt;div class="ui-card-content"&gt;
+        &lt;h3 class="ui-card-title" data-lang="..."&gt;Card Title&lt;/h3&gt;
+        &lt;p class="ui-card-description" data-lang="..."&gt;Card description text goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <h4>媛濡쒗삎 移대뱶 (.horizontal)</h4>
+                <p><code>.horizontal</code> ?대옒?ㅺ? 異붽???移대뱶???붾㈃ ?덈퉬???곕씪 ?대?吏? 肄섑뀗痢좎쓽 諛곗튂媛 ?먮룞?쇰줈 蹂寃쎈맗?덈떎. ?꾨줈紐⑥뀡?대굹 怨듭??ы빆泥섎읆 媛濡쒕줈 湲?肄섑뀗痢좎뿉 ?곹빀?⑸땲??</p>
+                <pre><code>&lt;!-- horizontal ?대옒??異붽? --&gt;
+&lt;div class="ui-card horizontal"&gt;
+    &lt;div class="ui-card-image-wrapper"&gt;
+        &lt;img src="./section/promotion/01.jpg" alt="?꾨줈紐⑥뀡 ?대?吏" class="ui-card-image"&gt;
+    &lt;/div&gt;
+    &lt;div class="ui-card-content"&gt;
+        &lt;span class="ui-card-tag" data-lang="promotion_tag_event"&gt;EVENT&lt;/span&gt;
+        &lt;h3 class="ui-card-title" data-lang="promotion_01_title"&gt;Special Promotion&lt;/h3&gt;
+        &lt;p class="ui-card-description" data-lang="promotion_01_desc"&gt;A detailed description of the promotion.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3 id="part4-3">4-3. ?곹샇?묒슜</h3>
+                <h4>.cta-button</h4>
+                <p>?ъ슜?먯쓽 ?대┃???좊룄?섎뒗 ?됰룞 ?좊룄 踰꾪듉.</p>
+                <h4>.js-lightbox-trigger</h4>
+                <p>?대?吏瑜??대┃?덉쓣 ???붾㈃ 以묒븰???앹뾽?쇰줈 ?꾩썎?덈떎.</p>
+
+                <h3 id="part4-4">4-4. ?뺣낫 ?쒓컖??/h3>
+                <h4>.process-grid</h4>
+                <p>?묒뾽 ?덉감???쒕퉬???댁슜 諛⑸쾿???④퀎蹂꾨줈 蹂댁뿬以띾땲??</p>
+                <h4>.price-info</h4>
+                <p>移대뱶 ?섎떒??遺숈뼱 ?붽툑 ?뺣낫瑜?紐낇솗?섍쾶 ?쒖떆?⑸땲??</p>
+
+                <h3 id="part4-5">4-5. Z-Index ?뺤콉</h3>
+                <p><code>z-index</code>???덈???臾몄젣?대?濡??쒖뒪???꾨컲??嫄몄퀜 ?쇨???洹쒖튃?쇰줈 愿由ы빀?덈떎. 肄붿뼱 ?쒖뒪??`v1.css`)??`z-index` 愿由??뺤콉? ?ㅼ쓬怨?媛숈? 怨꾩링 援ъ“瑜??곕쫭?덈떎.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>?쒖꽌</th>
+                            <th>z-index 踰붿쐞</th>
+                            <th>而댄룷?뚰듃</th>
+                            <th>??븷 諛??ㅻ챸</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>0 ~ 2</td>
+                            <td><strong>?숈쟻 諛곌꼍 ?붿냼</strong></td>
+                            <td>?ㅻ뜑???щ씪?대뱶 ?대?吏(<code>.slide</code>), 罹붾쾭???④낵(<code>.canvas-stars</code>), 鍮꾨뵒??諛곌꼍 ???섏씠吏??媛???꾨옒痢듭쓣 援ъ꽦?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td><strong>?ㅻ쾭?덉씠</strong> (<code>.overlay</code>)</td>
+                            <td>?숈쟻 諛곌꼍 ?꾩뿉 ?щ씪媛 ?대몼寃??섍굅???⑦꽩???낇엳???④낵瑜?以띾땲??</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><strong>?뱀뀡 肄섑뀗痢?/strong> (<code>.container</code>)</td>
+                            <td><strong>紐⑤뱺 移대뱶? ?띿뒪?몃? ?ы븿?섎뒗 ?듭떖 肄섑뀗痢??곸뿭?낅땲??</strong> ?ㅻ쾭?덉씠 ?꾩뿉 ?꾩튂?섏뿬 ??긽 ?댁슜??蹂댁씠?꾨줉 ?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5 ~ 10</td>
+                            <td><strong>?ㅻ뜑 二쇱슂 肄섑뀗痢?/strong></td>
+                            <td>?ㅻ뜑???쒕ぉ(<code>.content</code>), ?щ씪?대뱶 踰꾪듉(<code>.slide-indicators</code>) ???곹샇?묒슜???꾩슂???붿냼瑜?諛곗튂?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>900+</td>
+                            <td><strong>怨좎젙 UI ?붿냼</strong></td>
+                            <td><code>留??꾨줈 媛湲?/code> 踰꾪듉, <code>?대퉬寃뚯씠??諛?/code> ???섏씠吏 ?ㅽ겕濡ㅺ낵 ?곴??놁씠 ??긽 ?꾩뿉 ???덉뼱???섎뒗 UI ?붿냼?낅땲??</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2000+</td>
+                            <td><strong>紐⑤떖 諛??쇱씠?몃컯??/strong></td>
+                            <td><code>?쇱씠?몃컯??/code>, <code>?곕え 寃쎄퀬李?/code> ???ㅻⅨ 紐⑤뱺 ?붾㈃????퀬 理쒖긽?꾩뿉 ?쒖떆?섏뼱???섎뒗 ?뱀닔 UI ?붿냼?낅땲??</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <div class="rule-highlight">
+                    <p><b>?듭떖 ?먯튃:</b> ?대뼡 寃쎌슦?먮룄 移대뱶? 媛숈? ?듭떖 肄섑뀗痢?<code>.container</code>)???ㅻ쾭?덉씠(<code>.overlay</code>) ?꾩뿉 ?덉뼱???⑸땲?? ??洹쒖튃? 肄붿뼱 ?쒖뒪?쒖뿉 諛섏쁺?섏뼱 ?덉뼱, 蹂꾨룄??`z-index` 議곗젙 ?놁씠???щ컮瑜닿쾶 ?묐룞?⑸땲??</p>
+                </div>
+            </section>
+
+            <section id="part5" class="content-section">
+                 <h2>Part 5: ?덉떆??/h2>
+                <p>?먯＜ ?ъ슜?섎뒗 ?뱀뀡 援ъ꽦??援ъ껜?곸씤 肄붾뱶 ?덉떆?낅땲??</p>
+
+                <h3 id="part5-1">5-1. ?뺤쟻 肄섑뀗痢?/h3>
+                <h4>?덉떆??1: ?대┃???ы듃?대━??媛ㅻ윭由?/h4>
+                <p>移대뱶(<code>.ui-card</code>)? ?쇱씠?몃컯??<code>.js-lightbox-trigger</code>)瑜?議고빀?섏뿬, ?대┃ ???대?吏媛 ?뺣??섎뒗 ?ы듃?대━?ㅻ? 援ъ꽦?⑸땲??</p>
+                <pre><code>&lt;div class="card-grid grid-3"&gt;
+    &lt;!-- 諛섎났 ?꾩씠??--&gt;
+    &lt;div class="ui-card"&gt;
+        &lt;div class="ui-card-image-wrapper js-lightbox-trigger"&gt;
+            &lt;img src="./section/portfolio/01.jpg" alt="?쇱긽 硫붿씠?ъ뾽??諛쏆? 怨좉컼???ы듃?대━???ъ쭊" class="ui-card-image"&gt;
+        &lt;/div&gt;
+        &lt;div class="ui-card-content"&gt;
+            &lt;h3 class="ui-card-title" data-lang="portfolio_01_title"&gt;Daily Makeup&lt;/h3&gt;
+            &lt;p class="ui-card-description" data-lang="portfolio_01_desc"&gt;Natural and beautiful daily makeup for our client.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- /諛섎났 ?꾩씠??--&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3 id="part5-2">5-2. ?숈쟻 肄섑뀗痢?/h3>
+                <h4>?덉떆??2: FAQ 紐⑸줉 ?숈쟻 ?앹꽦</h4>
+                <p>以묒븰 ?쒕쾭??`lang.json`???곗씠?곕? ?낅젰?섎㈃, <code>v1.js</code>媛 ?먮룞?쇰줈 HTML ?붿냼瑜??앹꽦?⑸땲??</p>
+                <pre><code>// 以묒븰 ?쒕쾭??lang.json
+{
+    "ko": {
+        "faq_item_01_q": "泥ル쾲吏?吏덈Ц?낅땲??",
+        "faq_item_01_a": "泥ル쾲吏??듬??낅땲??"
+    },
+    "en": {
+        "faq_item_01_q": "This is the first question.",
+        "faq_item_01_a": "This is the first answer."
+    }
+}
+
+&lt;!-- index.html --&gt;
+&lt;div class="faq-list" data-content-type="faq" data-prefix="faq_item" data-dynamic-area&gt;
+    &lt;!-- ?먮룞 ?앹꽦 ?곸뿭 --&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3 id="part5-3">5-3. ?ㅼ씠?섎? ?뱀뀡</h3>
+                <p>?숈쟻??諛곌꼍 ?④낵濡??ъ씠?몄쓽 ?덇꺽???믪엯?덈떎.</p>
+
+                <h4>?덉떆??3: ?⑤윺?숈뒪 (Parallax) 諛곌꼍</h4>
+                <pre><code>&lt;section class="section section-dynamic" style="background-image: url(...);"&gt;
+    &lt;div class="overlay has-dot-pattern"&gt;&lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- ?뱀뀡 肄섑뀗痢?--&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                <h4>?덉떆??4: 鍮꾨뵒??諛곌꼍</h4>
+                 <pre><code>&lt;section class="section section-video-bg"&gt;
+    &lt;video class="background-video" src="..." autoplay muted loop playsinline&gt;&lt;/video&gt;
+    &lt;div class="overlay has-dot-pattern"&gt;&lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- ?뱀뀡 肄섑뀗痢?--&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                <blockquote>
+                    <b>李멸퀬:</b> <code>.has-dot-pattern</code> ?대옒?ㅻ뒗 ?대몢???ㅻ쾭?덉씠 ?꾩뿉 ?몃젴???꾪듃 ?⑦꽩??異붽??섏뿬 ?쒓컖??源딆씠媛먯쓣 ?뷀빀?덈떎. ?ㅻ뜑???ㅼ씠?섎? ?뱀뀡???ъ슜?섎뒗 寃껋쓣 沅뚯옣?⑸땲??
+                </blockquote>
+
+                <h3 id="part5-4">5-4. ???뱀뀡 (?ㅻ뜑)</h3>
+                <p>
+                    ???뱀뀡? ?ъ씠?몄쓽 泥レ씤?곸쓣 寃곗젙?섎뒗 以묒슂???곸뿭?낅땲?? ?щ씪?대뜑 ?대?吏, ?숈쟻 罹붾쾭??諛곌꼍, ??댄? ?깆쑝濡?援ъ꽦?⑸땲??
+                </p>
+
+                <h4>?덉떆??5: ???뱀뀡 ?꾩껜 援ъ“</h4>
+                <p>
+                    ?꾨옒??Page by Sigonggan ?꾨젅?꾩썙?ш? ?쒓났?섎뒗 紐⑤뱺 ?④낵(?대?吏 ?⑤윺?숈뒪, 罹붾쾭?? 肄섑뀗痢??⑤윺?숈뒪)瑜??곸슜???ㅻ뜑???꾩껜 援ъ“ ?덉떆?낅땲??
+                </p>
+                <pre><code>&lt;header id="home" class="fullscreen"&gt;
+    &lt;!-- 1. 諛곌꼍 ?대?吏 ?щ씪?대뜑 --&gt;
+    &lt;div class="slides-container"&gt;
+        &lt;div class="slide active"&gt;
+            &lt;img src="./section/home/01.jpg" alt="泥?踰덉㎏ ?щ씪?대뱶 諛곌꼍"&gt;
+        &lt;/div&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;!-- 2. 罹붾쾭???④낵 --&gt;
+    &lt;canvas class="canvas-stars"&gt;&lt;/canvas&gt;
+
+    &lt;!-- 3. ?ㅻ쾭?덉씠 --&gt;
+    &lt;div class="overlay has-dot-pattern"&gt;&lt;/div&gt;
+
+    &lt;!-- 4. 肄섑뀗痢?(js-parallax-content ?대옒?ㅻ줈 ?④낵 ?쒖꽦?? --&gt;
+    &lt;div class="content js-parallax-content"&gt;
+        &lt;h1&gt;?귞㈉??lt;/h1&gt;
+        &lt;p class="subtitle" data-lang="home_subtitle"&gt;?쒓났媛?lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 5. ?щ씪?대뱶 ?몃뵒耳?댄꽣 --&gt;
+    &lt;div class="slide-indicators"&gt;&lt;/div&gt;
+&lt;/header&gt;</code></pre>
+
+                <h3 id="part5-5">5-5. ?먮룞?ъ깮 ?щ씪?대뜑</h3>
+                <p>肄섑뀗痢??щ씪?대뜑???먮룞?ъ깮 諛??뺤?/?ъ깮 而⑦듃濡?湲곕뒫??異붽??섏뿬 ?ъ슜?먯쓽 二쇰ぉ?꾨? ?믪씪 ???덉뒿?덈떎. ??湲곕뒫? 肄붿뼱 ?쒖뒪??`v1.js`)???댁옣?섏뼱 ?덉쑝硫? ?뱀젙 HTML 援ъ“瑜?異붽??섎뒗 寃껊쭔?쇰줈 ?쒖꽦?붾맗?덈떎.</p>
+
+                <h4>?덉떆??6: ?먮룞?ъ깮 肄섑뀗痢??щ씪?대뜑</h4>
+                <p>湲곗〈 肄섑뀗痢??щ씪?대뜑 援ъ“??<code>&lt;div class="slider-nav"&gt;</code>瑜?異붽??섍퀬, 洹??덉뿉 <code>.slider-play-pause</code> ?대옒?ㅻ? 媛吏?踰꾪듉??諛곗튂?⑸땲??</p>
+                <pre><code>&lt;div class="content-slider-container js-content-slider"&gt;
+    &lt;div class="slider-wrapper"&gt;
+        &lt;!-- ?щ씪?대뜑 ?꾩씠?쒕뱾... --&gt;
+        &lt;div class="slider-item"&gt;...&lt;/div&gt;
+        &lt;div class="slider-item"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- ?대퉬寃뚯씠??踰꾪듉 ?곸뿭 異붽? --&gt;
+    &lt;div class="slider-nav"&gt;
+        &lt;button class="slider-prev" aria-label="Previous Slide"&gt;
+            &lt;span class="material-symbols-outlined"&gt;arrow_back&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;!-- ?ъ깮/?뺤? 踰꾪듉 異붽? --&gt;
+        &lt;button class="slider-play-pause" aria-label="Play/Pause Slider"&gt;
+            &lt;span class="material-symbols-outlined"&gt;play_arrow&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button class="slider-next" aria-label="Next Slide"&gt;
+            &lt;span class="material-symbols-outlined"&gt;arrow_forward&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                 <blockquote>
+                    <b>?묐룞 ?먮━:</b> <code>v1.js</code>媛 <code>.slider-play-pause</code> 踰꾪듉??媛먯??섎㈃ ?먮룞?쇰줈 3珥?媛꾧꺽???щ씪?대뱶 ?섍? 湲곕뒫???쒖꽦?뷀빀?덈떎. ?ъ슜?먭? ?ъ깮/?뺤? 踰꾪듉???대┃?섍굅?? ?щ씪?대뜑 ?곸뿭??留덉슦?ㅻ? ?щ━硫??먮룞?ъ깮???쇱떆?곸쑝濡?硫덉텛怨? 留덉슦?ㅻ? ?쇰㈃ ?ㅼ떆 ?쒖옉?⑸땲??
+                </blockquote>
+            </section>
+
+            <section id="part6" class="content-section">
+                <h2>Part 6: ?곕え</h2>
+                <h3 id="part6-1">6-1. ?곕え 媛쒖슂</h3>
+                <p>?곕え ?ъ씠?몃뒗 Page by Sigonggan ?꾨젅?꾩썙?ъ쓽 湲곕뒫怨?媛?μ꽦???좎옱 怨좉컼?먭쾶 蹂댁뿬二쇨린 ?꾪븳 紐⑹쟻?쇰줈 ?쒖옉?⑸땲?? ?쇰컲 ?뱀궗?댄듃? ?щ━, ?쒖뒪???띾낫 諛??쒖옉 臾몄쓽 ?좊룄瑜??꾪븳 ?뱀젙 ?뱀뀡?ㅼ쓣 ?ы븿?⑸땲??</p>
+
+                <h3 id="part6-2">6-2. ?곕え ?뱀뀡 ?덉떆??/h3>
+                <h4>?쒖옉 臾몄쓽(Request) ?뱀뀡</h4>
+                <pre><code>&lt;section id="request" class="section"&gt;
+    &lt;div class="container"&gt;
+        &lt;h2 data-lang="demo_request_title"&gt;Request a Website&lt;/h2&gt;
+        &lt;p class="section-description" data-lang="demo_request_desc"&gt;Interested in our service? Contact us now.&lt;/p&gt;
+        &lt;div class="action-buttons-container"&gt;
+            &lt;a class="cta-button" data-lang-href="demo_request_button_url"&gt;
+                &lt;span data-lang="demo_request_button"&gt;Get a Quote&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                <h4>愿묎퀬(Advertisement) ?뱀뀡</h4>
+                <p>Google Adsense瑜??쒖슜?섏뿬 ?곕え ?ъ씠?몄뿉 愿묎퀬瑜??쒖떆?⑸땲??</p>
+                <pre><code>&lt;!-- 1. head ?쒓렇 ?덉뿉 愿묎퀬 ?ㅽ겕由쏀듃 異붽? --&gt;
+&lt;head&gt;
+    ...
+    &lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;!-- 2. 蹂몃Ц(main) ?덉뿉 愿묎퀬 ?뱀뀡 異붽? --&gt;
+&lt;section id="advertisement" class="section"&gt;
+    &lt;div class="container"&gt;
+        &lt;h2 data-lang="advertisement_title"&gt;Advertisement&lt;/h2&gt;
+        &lt;ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"&gt;&lt;/ins&gt;
+        &lt;p class="disclaimer-text" data-lang="demo_msg_advertising"&gt;This is an ad space.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                <h4>?곕え ?ъ씠??怨듯넻 ?덈궡 臾멸뎄</h4>
+                <p>紐⑤뱺 ?곕え ?ъ씠?몄뿉??諛⑸Ц?먯뿉寃??대떦 ?ъ씠?멸? ?덉떆?⑹엫???뚮━??怨좎젙 臾멸뎄瑜?`overview`? `contact` ?뱀뀡??媛??留덉?留됱뿉 異붽??⑸땲??</p>
+                <pre><code>&lt;!-- Overview ?뱀뀡??異붽? --&gt;
+&lt;p class="disclaimer-text" data-lang="demo_msg_disclaimer"&gt;This is a demo site for demonstration purposes only.&lt;/p&gt;
+
+&lt;!-- Contact ?뱀뀡??異붽? --&gt;
+&lt;p class="disclaimer-text" data-lang="demo_msg_information"&gt;The information on this site is fictional.&lt;/p&gt;</code></pre>
+
+                <h3 id="part6-3">6-3. ?곕え 留곹겕 泥섎━</h3>
+                <p>?곕え ?ъ씠?몄쓽 ?곕씫泥? ?대찓?? SNS 二쇱냼 ?깆? ?ㅼ젣 ?뺣낫媛 ?꾨땲誘濡? ?ъ슜?먭? ?대┃?덉쓣 ???ㅽ빐媛 ?녿룄濡?寃쎄퀬李쎌쓣 ?꾩썙 ?덈궡?댁빞 ?⑸땲?? ??湲곕뒫? 肄붿뼱 ?쒖뒪??`v1.js`)???댁옣?섏뼱 ?덉쑝硫? ?뱀젙 ?대옒?ㅻ? 異붽??섎뒗 寃껊쭔?쇰줈 媛꾨떒???쒖꽦?뷀븷 ???덉뒿?덈떎.</p>
+                <h4>?ъ슜 諛⑸쾿</h4>
+                <p>寃쎄퀬李쎌쓣 ?꾩슦怨??띠? <code>&lt;a&gt;</code> ?쒓렇??<code>js-demo-link</code> ?대옒?ㅻ? 異붽??⑸땲??</p>
+                <pre><code>&lt;!-- Contact ?뱀뀡???곕씫泥?紐⑸줉???곸슜???덉떆 --&gt;
+&lt;div class="ui-contact-list"&gt;
+    ...
+    &lt;div class="ui-contact-item"&gt;
+        &lt;strong class="item-label" data-lang="contact_label_email"&gt;E-mail&lt;/strong&gt;
+        &lt;!-- js-demo-link ?대옒??異붽? --&gt;
+        &lt;a href="mailto:chuu@chuu.kr" class="item-value js-demo-link" data-lang="email_address" data-lang-href="email_href"&gt;chuu@chuu.kr&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                <blockquote>
+                    <b>?묐룞 ?먮━:</b> <code>v1.js</code> ?ㅽ겕由쏀듃媛 <code>js-demo-link</code> ?대옒?ㅺ? ?덈뒗 留곹겕???대┃ ?대깽?몃? 媛먯??섏뿬, ?섏씠吏 ?대룞??留됯퀬 <code>v1.json</code>???뺤쓽??`link_warning` ?띿뒪?몃? ?댁? 寃쎄퀬 紐⑤떖???붾㈃???쒖떆?⑸땲?? 紐⑤떖??'?뺤씤' 踰꾪듉???꾨Ⅴ硫?留곹겕媛 ????뿉???대━怨? '痍⑥냼'瑜??꾨Ⅴ硫?紐⑤떖留??ロ옓?덈떎.
+                </blockquote>
+            </section>
+
+            <section id="part7" class="content-section">
+                <h2>Part 7: SEO</h2>
+                <h3 id="part7-1">7-1. ?듭떖 洹쒖튃</h3>
+                 <div class="rule-highlight">
+                    <h4 style="margin-top: 0;">?뱦 洹쒖튃 1: HTML??誘몃━ ?묒꽦</h4>
+                    <p>寃???붿쭊???ъ씠?몄쓽 ?듭떖 ?뺤껜?깆쓣 利됱떆 ?뚯븙?????덈룄濡? <strong>紐⑤뱺 ?뱀뀡???쒕ぉ, ?ㅻ챸 ?띿뒪?몃? '湲곕낯 ?몄뼱(?쒓뎅??沅뚯옣)' 湲곗??쇰줈 <code>index.html</code> ?뚯씪??吏곸젒 ?묒꽦</strong>?⑸땲?? ?대뒗 寃???붿쭊???꾪븳 珥덇린 濡쒕뵫??'誘몃━蹂닿린' ??븷?대ŉ, ?ㅼ젣 ?몄뼱 ?꾪솚 湲곕뒫? 以묒븰 ?쒕쾭??<code>lang.json</code> ?곗씠?곕? 湲곕컲?쇰줈 ?뺤긽 ?숈옉?⑸땲??</p>
+                    <p>?뱁엳 ?꾨옒 ?붿냼?ㅼ? ?몄뼱? 愿怨꾩뾾????긽 <strong>怨좎쑀??釉뚮옖???꾩씠?댄떚??/strong>瑜??좎??섎룄濡??묒꽦?⑸땲??</p>
+                    <ul>
+                        <li>?대퉬寃뚯씠??諛?濡쒓퀬: <code>&lt;a class="logo"&gt;Page by Sigonggan&lt;/a&gt;</code></li>
+                        <li>?ㅻ뜑(Home) 硫붿씤 ??댄?: <code>&lt;h1&gt;?귞㈉??lt;/h1&gt;</code></li>
+                    </ul>
+                </div>
+                <h4>洹쒖튃 2: `sitemap.xml` ?뚯씪 愿由?/h4>
+                <p>?ъ씠?몄쓽 ?꾩껜 援ъ“瑜?寃???붿쭊?먭쾶 ?뚮젮二쇨린 ?꾪빐 <code>sitemap.xml</code> ?뚯씪???앹꽦?섍퀬 愿由ы빀?덈떎. ?ъ씠?몄쓽 硫붿씤 二쇱냼? <code>#</code>???ы븿??紐⑤뱺 ?뱀뀡??二쇱냼瑜??깅줉?섍퀬, <code>&lt;lastmod&gt;</code> ?쒓렇??理쒖쥌 ?섏젙?쇱쓣 湲곗엯?⑸땲??</p>
+
+                <h4>洹쒖튃 3: 紐⑤뱺 ?대?吏??`alt` ?띿꽦 ?묒꽦</h4>
+                <p>紐⑤뱺 <code>&lt;img&gt;</code> ?쒓렇?먮뒗 ?대?吏瑜??ㅻ챸?섎뒗 `alt` ?띿꽦??諛섎뱶???묒꽦?섏뿬 ???묎렐?깃낵 ?대?吏 寃??理쒖쟻?붾? 以?섑빀?덈떎.</p>
+
+                <h4>洹쒖튃 4: 罹먮끂?덉뺄(Canonical) URL 吏??/h4>
+                <p>?ъ씠??二쇱냼媛 ?щ윭 媛쒕줈 ?묎렐????寃???붿쭊???쇰룞?섏? ?딅룄濡? <code>&lt;head&gt;</code> ?쒓렇 ?덉뿉 <code>&lt;link rel="canonical" href="..." /&gt;</code> 肄붾뱶瑜?異붽??섏뿬 媛????쒖쟻???쒖? 二쇱냼瑜?吏?뺥빀?덈떎.</p>
+
+                <h3 id="part7-2">7-2. 怨좉툒 ?꾨왂: JSON-LD</h3>
+                <p>JSON-LD??寃???붿쭊???ъ씠???뺣낫瑜?援ъ“?붾맂 諛⑹떇?쇰줈 ?쒓났?섏뿬, 寃??寃곌낵?먯꽌 '由ъ튂 ?ㅻ땲?? ?몄텧 ?뺣쪧???믪엯?덈떎. ?꾨옒 肄붾뱶瑜?<code>&lt;head&gt;</code>??異붽??섍퀬 ?ъ씠???뺣낫??留욊쾶 ?섏젙?섏뿬 ?ъ슜?⑸땲??</p>
+
+                <pre><code>&lt;script type="application/ld+json"&gt;
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Website Creation",
+    "provider": {
+        "@type": "Person",
+        "name": "Maxim"
+    },
+    "name": "Page by Sigonggan",
+    "url": "https://www.sigonggan.com/@/page",
+    "logo": "https://cdn.maxim.pe.kr/_image/seo/maxim/logo.png",
+    "description": "?뱀떊???쒓컙怨?怨듦컙?????섏씠吏???댁븘 ?쒕┰?덈떎."
+}
+&lt;/script&gt;</code></pre>
+            </section>
+
+            <section id="part8" class="content-section">
+                <h2>Part 8: 肄섑뀗痢??묒꽦</h2>
+                <p>?쇨??섍퀬 ?꾨Ц?곸씤 ?ъ씠???쒖옉???꾪븳 ?띿뒪??肄섑뀗痢??묒꽦 洹쒖튃?낅땲??</p>
+
+                <h3 id="part8-1">8-1. 湲????沅뚯옣 ?ы빆</h3>
+                <p>媛??붿냼??湲???섎? ?꾨옒 湲곗???留욎떠 ?묒꽦?섎㈃ ?꾩껜 ?덉씠?꾩썐??洹좏삎怨?媛?낆꽦???좎??????덉뒿?덈떎.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>??ぉ</th>
+                            <th>沅뚯옣 湲몄씠 (怨듬갚 ?ы븿)</th>
+                            <th>?ㅻ챸</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>?뱀뀡/移대뱶 ?쒕ぉ</td>
+                            <td>7???댄븯</td>
+                            <td>媛꾧껐?섍퀬 紐낇솗???쒕ぉ???꾪빐 理쒕? 湲???섎? ?섏? ?딆븘???⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td>?뱀뀡 ?ㅻ챸</td>
+                            <td>25???섏?</td>
+                            <td rowspan="3">?덉씠?꾩썐???쇨??깆쓣 ?꾪빐 紐낆떆??湲???섏뿉???ш쾶 踰쀬뼱?섏? ?딄쾶 ?묒꽦?섎뒗 寃껋쓣 沅뚯옣?⑸땲??</td>
+                        </tr>
+                        <tr>
+                            <td>移대뱶 ?ㅻ챸</td>
+                            <td>40???섏?</td>
+                        </tr>
+                        <tr>
+                            <td>FAQ ?듬?</td>
+                            <td>70???섏?</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    <b>'?댄븯'? '?섏?'???섎?</b><br>
+                    - <strong>?댄븯:</strong> 紐낆떆??湲???섎? ?섏? ?딅뒗 寃껋쓣 ?섎??⑸땲??<br>
+                    - <strong>?섏?:</strong> 湲???섍? 議곌툑 留롪굅???곷뜑?쇰룄, ?꾩껜?곸씤 洹좏삎???꾪빐 媛湲됱쟻 鍮꾩듂??湲몄씠瑜??좎??댁빞 ?쒕떎???섎??낅땲??
+                </blockquote>
+
+                <h3 id="part8-2">8-2. 臾몄껜 諛??쒗쁽</h3>
+                <p>?뺣낫 ?꾨떖??紐낇솗?깃낵 媛?낆꽦???믪씠湲??꾪빐, ?щ윭 ?뺣낫瑜???臾몄옣?쇰줈 ?꾨떖??寃쎌슦, 臾몄옣 以묎컙??留덉묠?쒕줈 ?딄린蹂대떎 ?곌껐 ?대?(~?섎ŉ, ~?닿퀬)瑜??ъ슜?섏뿬 ?먯뿰?ㅻ윭???먮쫫???좎??⑸땲??</p>
+                <pre><code>&lt;!-- 醫뗭? ?덉떆 --&gt;
+'service_desc': '蹂??쒕퉬?ㅻ뒗 珥덇린 ?ъ씠???ㅼ젙???ы븿?섎ŉ, ?덉젙?곸씤 ?댁쁺???꾪븳 湲곗닠 吏?먯쓣 ?쒓났?⑸땲??'
+
+&lt;!-- ?꾩돩???덉떆 --&gt;
+'service_desc': '蹂??쒕퉬?ㅻ뒗 珥덇린 ?ъ씠???ㅼ젙???ы븿?⑸땲?? ?덉젙?곸씤 ?댁쁺???꾪븳 湲곗닠 吏?먮룄 ?쒓났?⑸땲??'</code></pre>
+            </section>
+
+            <section id="part9" class="content-section">
+                <h2>Part 9: Version History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Version</th>
+                            <th>Last Modified</th>
+                            <th>Summary of Changes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1.24.0</strong></td>
+                            <td>2025-08-20</td>
+                            <td><strong>'?쒓났媛? 由щ툕?쒕뵫:</strong> 'Provider'?먯꽌 '?쒓났媛??쇰줈 釉뚮옖?쒕챸 蹂寃?諛?CDN URL 援ъ“ ?낅뜲?댄듃. ?쒖옉???뺣낫 蹂寃?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1.23.0</strong></td>
+                            <td>2025-08-18</td>
+                            <td><strong>'Provider' 由щ툕?쒕뵫:</strong> 'Maxim'?먯꽌 'Provider'濡?釉뚮옖?쒕챸 蹂寃?諛?CDN URL 援ъ“ ?낅뜲?댄듃.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1.22.0</strong></td>
+                            <td>2025-08-05</td>
+                            <td><strong>'Nine Style' 由щ툕?쒕뵫:</strong> 'Maxim'??媛쒖씤 ?쒕퉬??'Page Express'濡?釉뚮옖???꾨㈃ 媛쒗렪. 愿???⑹뼱, 寃쎈줈, ?덉떆 肄붾뱶 紐⑤몢 ?섏젙.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1.19.0</strong></td>
+                            <td>2025-08-05</td>
+                            <td><strong>肄섑뀗痢??щ씪?대뜑 ?먮룞?ъ깮 湲곕뒫 異붽?:</strong> `v1.js`???먮룞?ъ깮 濡쒖쭅 諛?而⑦듃濡?湲곕뒫 異붽?, `v1_setup.html`??愿???덉떆??異붽?.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>
+                    <b>踰꾩쟾 湲곕줉 諛⑹떇</b><br>
+                    - ?묒뾽??吏꾪뻾 以묒씪 ?뚮뒗 踰꾩쟾???좎??섎ŉ, ?숈씪 理쒖쥌 ?섏젙???댁뿉?쒕뒗 蹂寃??대젰???섎굹??<code>&lt;tr&gt;</code>???듯빀?섏뿬 湲곕줉?⑸땲??<br>
+                    - 理쒖쥌 ?섏젙?쇱씠 寃쎄낵?덇굅?? ?ъ슜?먭? ?붿껌?섎뒗 ???묒뾽???쇰떒?쎈릺?덈떎怨??먮떒??寃쎌슦?먮쭔 踰꾩쟾???щ┰?덈떎.
+                </blockquote>
+            </section>
+        </main>
+    </div>
+    <script>
+        /* gl.js */
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.guide-nav a');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.guide-nav a[href="#${id}"]`);
+
+                        let current = activeLink;
+                        const linksToActivate = [current];
+
+                        let parentUl = current ? current.closest('ul') : null;
+                        while(parentUl && parentUl.parentElement.tagName === 'LI') {
+                            const parentLi = parentUl.parentElement;
+                            const parentLink = parentLi.querySelector('a');
+                             if(parentLink) {
+                                linksToActivate.push(parentLink);
+                             }
+                             parentUl = parentLi.closest('ul');
+                        }
+
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        linksToActivate.forEach(l => l && l.classList.add('active'));
+                    }
+                });
+            }, { rootMargin: "-40% 0px -60% 0px", threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            document.querySelectorAll('.guide-nav a').forEach(mainLink => {
+                mainLink.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                         e.preventDefault();
+                         targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
