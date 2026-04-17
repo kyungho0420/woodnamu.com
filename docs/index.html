@@ -28,8 +28,8 @@
     <script src="https://dev.dam.so/_inc/ex/v4/plug/canvas.js"></script>
 
     <!-- Project Specific -->
-    <link rel="stylesheet" href="./lay.css?v=2.0.0">
-    <script src="./lay.js?v=2.0.0" defer></script>
+    <link rel="stylesheet" href="./lay.css?v=2.2.0">
+    <script src="./lay.js?v=2.2.0" defer></script>
 
     <meta property="og:title" data-i18n="meta_title" content="Woodnamu">
     <meta property="og:description" data-i18n="meta_description" content="전문화된 한 페이지 웹사이트를 제공합니다.">
@@ -141,12 +141,12 @@
                 <div class="damso-grid damso-grid--cols-2">
                     <!-- AI Plan Card -->
                     <div class="damso-card">
-                        <span class="damso-card__badge" data-i18n="plan_ai_badge"></span>
                         <div class="damso-card__content">
+                            <span class="damso-card__badge" data-i18n="plan_ai_badge"></span>
                             <h3 class="damso-card__title" data-i18n="plan_ai_title_main"></h3>
                             <p class="damso-card__subtitle" data-i18n="plan_ai_title_sub"></p>
                             <p class="damso-card__description" data-i18n="plan_ai_desc"></p>
-                            <!-- Specs Table (Simplified for Matte Theme) -->
+                            <!-- Specs Table -->
                             <div class="damso-specs-table">
                                 <div class="damso-specs-item"><span data-i18n="plan_specs_label_method"></span><span data-i18n="plan_ai_specs_value_method"></span></div>
                                 <div class="damso-specs-item"><span data-i18n="plan_specs_label_text"></span><span data-i18n="plan_ai_specs_value_text"></span></div>
@@ -201,10 +201,50 @@
             </div>
         </section>
 
-        <section id="request" class="damso-section">
+        <section id="contact" class="damso-section">
             <div class="damso-container js-fade-in">
                 <h2 class="damso-section__title">
                     <span translate="no" class="material-symbols-outlined notranslate">mail</span>
+                    <span data-i18n="section_contact_title">Contact Us</span>
+                </h2>
+                <p class="damso-section__description" data-i18n="section_contact_desc"></p>
+                <form class="damso-form damso-contact-form" autocomplete="off" data-demo-mode="true">
+                    <input type="email" name="email" required class="damso-form__input"
+                        data-i18n-placeholder="form_placeholder_email" placeholder="Email">
+                    <div class="damso-form__textarea-wrapper">
+                        <textarea name="message" rows="5" required maxlength="5000" class="damso-form__textarea"
+                            data-i18n-placeholder="form_placeholder_msg" placeholder="Message"></textarea>
+                    </div>
+                    <input type="hidden" name="form" value="woodnamu">
+                    <button type="submit" class="damso-btn">
+                        <span class="damso-form__text" data-i18n="btn_submit">보내기</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="search" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2 class="damso-section__title">
+                    <span translate="no" class="material-symbols-outlined notranslate">search</span>
+                    <span data-i18n="section_search_title">Search</span>
+                </h2>
+                <p class="damso-section__description" data-i18n="section_search_desc"></p>
+                <form class="damso-form damso-search-form" autocomplete="off" data-demo-mode="true">
+                    <input type="text" name="key" required class="damso-form__input"
+                        data-i18n-placeholder="form_placeholder_search" placeholder="Search...">
+                    <input type="hidden" name="form" value="woodnamu">
+                    <button type="submit" class="damso-btn">
+                        <span class="damso-form__text" data-i18n="btn_search">검색</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="request" class="damso-section">
+            <div class="damso-container js-fade-in">
+                <h2 class="damso-section__title">
+                    <span translate="no" class="material-symbols-outlined notranslate">contact_support</span>
                     <span data-i18n="request_title">Request</span>
                 </h2>
                 <p class="damso-section__description" data-i18n="request_desc"></p>
