@@ -71,13 +71,7 @@
         "faq_item_04_q": "연간 비용에 호스팅도 포함되나요?",
         "faq_item_04_a": "네, Google SSL 인증서가 적용된 호스팅이 제공됩니다.",
         "faq_more_button_text": "더 알아보기",
-        "faq_more_button_url": "https://woodnamu.com/docs/manual/lang.ko.html",
-        "request_title": "무엇을 도와드릴까요?",
-        "request_desc": "제작 상담 및 신청은 아래 버튼을 눌러주세요.",
-        "request_button_1_text": "상담하기",
-        "request_button_1_url": "https://www.maxim.pe.kr/contact",
-        "request_button_2_text": "신청하기",
-        "request_button_2_url": "https://forms.maxim.pe.kr/page/?lang=ko"
+        "faq_more_button_url": "https://woodnamu.com/docs/manual/lang.ko.html"
     },
     "en": {
         "meta_title": "Woodnamu - Premium Single Page",
@@ -151,12 +145,6 @@
         "faq_item_04_q": "Is hosting included in the annual fee?",
         "faq_item_04_a": "Yes, hosting is provided with the Cloudflare network and a Google SSL certificate.",
         "faq_more_button_text": "Learn More",
-        "faq_more_button_url": "https://woodnamu.com/docs/manual/lang.en.html",
-        "request_title": "How can we help you?",
-        "request_desc": "For creation consultation and application, please click the buttons below.",
-        "request_button_1_text": "Consult",
-        "request_button_1_url": "https://www.maxim.pe.kr/contact",
-        "request_button_2_text": "Apply Now",
-        "request_button_2_url": "https://forms.maxim.pe.kr/page/?lang=en"
+        "faq_more_button_url": "https://woodnamu.com/docs/manual/en/index.html"
     }
 }
