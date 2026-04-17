@@ -6,7 +6,7 @@ const siteConfig = {
     meta: {
         framework: 'V4',
         type: 'page',
-        mode: 'demo',
+        mode: null,
         lang: 'ko',
         theme: 'dark', // Matte 느낌을 위해 다크 테마 강제
         scroll_smooth: true
